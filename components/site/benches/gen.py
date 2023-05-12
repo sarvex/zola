@@ -145,7 +145,7 @@ template = "section_paginated.html"
 
     day = datetime.date.today()
     for (i, page) in enumerate(range(0, num_pages)):
-        with open(os.path.join(path, "page-{}.md".format(i)), "w") as f:
+        with open(os.path.join(path, f"page-{i}.md"), "w") as f:
             f.write(
                 PAGE
                 .replace("REPLACE_DATE", str(day + datetime.timedelta(days=1)))
